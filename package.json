@@ -32,6 +32,8 @@
   },
   "devDependencies": {
     "eslint": "^4.8.0",
+    "eslint-config-hapi": "^10.1.0",
+    "eslint-plugin-hapi": "^4.0.0",
     "lab": "^14.3.1"
   }
 }
