@@ -1,6 +1,6 @@
 {
   "name": "hapi-starter",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A Hapi Starter RDMS with Sequelize ORM",
   "main": "server.js",
   "scripts": {
