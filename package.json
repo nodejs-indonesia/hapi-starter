@@ -41,6 +41,7 @@
     "eslint-config-hapi": "^10.1.0",
     "eslint-plugin-hapi": "^4.0.0",
     "lab": "^14.3.1",
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "sqlite3": "^3.1.13"
   }
 }
