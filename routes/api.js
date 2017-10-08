@@ -2,7 +2,7 @@
 
 const Controllers   = require('../controllers');
 const Validation    = require('../validation');
-const Pkg           = require(__dirname + '/package.json');
+const Pkg           = require('../package.json');
 const prefixUrl        = '/';
 
 module.exports = [{
