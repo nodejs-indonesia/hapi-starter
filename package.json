@@ -24,6 +24,7 @@
   "homepage": "https://github.com/nodejs-indonesia/hapi-starter#readme",
   "dependencies": {
     "boom": "^6.0.0",
+    "config": "^1.26.2",
     "dotenv": "^4.0.0",
     "good": "^7.3.0",
     "good-console": "^6.4.0",
