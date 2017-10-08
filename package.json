@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/nodejs-indonesia/hapi-starter#readme",
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "boom": "^6.0.0",
     "config": "^1.26.2",
     "dotenv": "^4.0.0",
