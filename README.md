@@ -33,6 +33,7 @@ List of Packages
 | eslint               | A fully pluggable tool for identifying and reporting on patterns in JavaScript.                                                       |
 | eslint-config-hapi   | Shareable ESLint config for the hapi ecosystem.                                                                                       |
 | eslint-plugin-hapi   | ESLint plugin containing hapi style guide rules                                                                                       |
+| hapi-no-var   | ESLint rule to enforce the usage of var declarations only in try-catch scope                                                                                       |
 | lab                  | Simple test utility for Node.js.                                                                                                      |
 | nodemon              | Monitor for any changes in your node.js application and automatically restart the server.                                             |
 | sqlite3              | Asynchronous, non-blocking SQLite3 bindings for Node.js.                                                                              |
