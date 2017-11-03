@@ -11,7 +11,7 @@ const Plugins   = require('./plugins'); // Load Plugins
 const Models    = require('./database/models'); // Add the Models
 
 
-//Server Config
+// Server Config
 server.connection(_.pick(Config, ['host', 'port', 'Routes']));
 
 // Export the server to be required elsewhere.

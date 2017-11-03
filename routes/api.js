@@ -1,7 +1,7 @@
 'use strict';
 
-const Controllers   = require('../controllers');
-const Validation    = require('../validation');
+// const Controllers   = require('../controllers');
+// const Validation    = require('../validation');
 const Pkg           = require('../package.json');
 const prefixUrl        = '/';
 
