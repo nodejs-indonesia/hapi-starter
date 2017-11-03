@@ -29,6 +29,8 @@ engines:
     enabled: true
     config:
       languages:
+      - javascript:
+
 # Engines can analyze files and report issues on them, but you can separately
 # decide which files will receive ratings based on those issues. This is
 # specified by path patterns under the ratings key.
@@ -38,8 +40,9 @@ engines:
 
 # Note: If the ratings key is not specified, this will result in a 0.0 GPA on your dashboard.
 
-# ratings:
-#   paths:
+ratings:
+  paths:
+    - "**.js"
 #   - app/**
 #   - lib/**
 #   - "**.rb"
