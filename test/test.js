@@ -1,16 +1,14 @@
 'use strict';
 
 const Hapi      = require('hapi');
-const _         = require('lodash');
 const server    = new Hapi.Server(); // Create a server with a host and port
-const Config    = require('../config/app'); // Config app
 const Routes    = require('../routes/api'); // Add the route
 const Lab       = require('lab');
 const lab       = exports.lab = Lab.script();
 const Code      = require('code');
 
-//Server Config
-server.connection(_.pick(Config, ['host', 'port', 'Routes'])); //Server Config
+// Server Port
+server.connection({ port: process.env.SERVER_PORT });
 
 server.route(Routes);
 
