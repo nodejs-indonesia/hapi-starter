@@ -1,7 +1,10 @@
 # Hapi Starter
 ### A Hapi Starter RDMS with Sequelize ORM
 
-[![Dependency Status](https://david-dm.org/nodejs-indonesia/hapi-starter/status.svg?style=flat)](https://david-dm.org/nodejs-indonesia/hapi-starter) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/nodejs-indonesia/hapi-starter/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/nodejs-indonesia/hapi-starter.svg?branch=master)](https://travis-ci.org/nodejs-indonesia/hapi-starter)
+[![Dependency Status](https://david-dm.org/nodejs-indonesia/hapi-starter/status.svg?style=flat)](https://david-dm.org/nodejs-indonesia/hapi-starter)
+[![Code Climate](https://codeclimate.com/github/nodejs-indonesia/hapi-starter/badges/gpa.svg)](https://codeclimate.com/github/nodejs-indonesia/hapi-starter)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/nodejs-indonesia/hapi-starter/blob/master/LICENSE)
 
 
 A boilerplate for the **Node.js** web application, which uses RDBS (relational database systems) such as MySQL, PostgreSQL, SQL Server and others.
