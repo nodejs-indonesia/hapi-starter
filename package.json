@@ -4,7 +4,7 @@
   "description": "A Hapi Starter RDMS with Sequelize ORM",
   "main": "server.js",
   "scripts": {
-    "test": "lab -c -t 100",
+    "test": "lab -cLv -t 100",
     "test-cov-html": "lab -r html -o test/coverage/coverage.html",
     "dev": "nodemon server.js"
   },
