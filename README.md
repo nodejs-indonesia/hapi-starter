@@ -3,8 +3,7 @@
 
 [![Build Status](https://travis-ci.org/nodejs-indonesia/hapi-starter.svg?branch=master)](https://travis-ci.org/nodejs-indonesia/hapi-starter)
 [![Dependency Status](https://david-dm.org/nodejs-indonesia/hapi-starter/status.svg?style=flat)](https://david-dm.org/nodejs-indonesia/hapi-starter)
-[![Maintainability](https://api.codeclimate.com/v1/badges/9c09ca157f69411fd75b/maintainability)](https://codeclimate.com/github/nodejs-indonesia/hapi-starter/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/9c09ca157f69411fd75b/test_coverage)](https://codeclimate.com/github/nodejs-indonesia/hapi-starter/test_coverage)
+[![codecov](https://codecov.io/gh/nodejs-indonesia/hapi-starter/branch/master/graph/badge.svg)](https://codecov.io/gh/nodejs-indonesia/hapi-starter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/nodejs-indonesia/hapi-starter/blob/master/LICENSE)
 
 
