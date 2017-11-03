@@ -6,7 +6,8 @@
   "scripts": {
     "test": "lab -cLv -t 90",
     "test-cov-html": "lab -r html -o test/coverage/coverage.html",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "codecov": "istanbul cover ./node_modules/lab/bin/lab --report lcovonly  -- -l"    
   },
   "repository": {
     "type": "git",
