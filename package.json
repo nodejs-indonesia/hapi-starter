@@ -20,7 +20,7 @@
     "sequelize"
   ],
   "author": "Node JS Indonesia <https://github.com/nodejs-indonesia>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nodejs-indonesia/hapi-starter/issues"
   },
