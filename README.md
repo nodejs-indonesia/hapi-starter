@@ -57,6 +57,12 @@ $ cd hapi-starter
 $ npm install
 ```
 
+Create database development.
+
+```bash
+db_development
+```
+
 Setting environment and start the server.
 
 ```bash
@@ -70,6 +76,12 @@ Run test using lab:
 
 ```bash
 npm test
+```
+
+Run test coverage using istanbul:
+
+```bash
+npm run codecov
 ```
 
 ## Contributing
