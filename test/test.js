@@ -21,7 +21,7 @@ lab.experiment('API Tests', () => {
 
         const options = {
             method: 'GET',
-            url: '/'
+            url: '/api/v1'
         };
         // server.inject lets you simulate an http request
         Server.inject(options, (response) => {
