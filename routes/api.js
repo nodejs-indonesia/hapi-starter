@@ -2,12 +2,12 @@
 
 // const Controllers   = require('../controllers');
 // const Validation    = require('../validation');
-const Pkg           = require('../package.json');
-const prefixUrl        = '/';
+const Pkg              = require('../package.json');
+const apiUrl           = '/api/v1';
 
 module.exports = [{
     method: 'GET',
-    path: prefixUrl,
+    path: apiUrl,
     config: {
         auth: false
     },
