@@ -3,10 +3,21 @@ sudo: false # faster builds
 
 node_js:
   - "6.0.0"
+
+services:
+- mysql
+
+before_install:
+  - mysql -e 'CREATE DATABASE db_development;'
+
 install:
   - npm install -g codecov
   - npm install
+
 script:
-  - npm run codecov && codecov
+  - npm run test
+  - npm run codecov
+  - codecov
+
 after_success: 
   — bash <(curl -s https://codecov.io/bash)
