@@ -6,13 +6,16 @@ node_js:
   - "lts/*"
   - "8"
   - "7"
+  - "6"
 
 services:
 - mysql
 
-install:
+before_install:
   - npm install -g codecov
   - npm install -g sequelize-cli
+
+install:
   - npm install
 
 before_script:
