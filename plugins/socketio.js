@@ -12,7 +12,7 @@ exports.register = function (server, options, next) {
 
     io.on('connection', (socket) => {
 
-        console.log(`Websocket running at: ${server.select('websocket').info.uri}`);
+        console.log('Info' ,`Websocket running at: ${server.select('websocket').info.uri}`);
 
         console.log(`Socket ${socket.id} connected !`);
 

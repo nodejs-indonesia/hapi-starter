@@ -66,6 +66,9 @@ module.exports = [
     },
     {
         register: require('./socketio')
+    },
+    {
+        register: require('./sequelize')
     }
     // require additional plugins here
 ];

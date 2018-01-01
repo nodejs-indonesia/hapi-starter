@@ -8,7 +8,7 @@ const server    = new Hapi.Server(); // Create a server with a host and port
 const Config    = require('./config/app'); // Config app
 const Routes    = require('./routes'); // Add the route
 const Plugins   = require('./plugins'); // Load Plugins
-const Models    = require('./models'); // Add the Models
+// const Models    = require('./models'); // Add the Models
 
 
 // Server Config
@@ -26,39 +26,7 @@ server.register(Plugins, (err) => {
         throw err;
     }
 
-    console.log('info', 'Plugins registered');
-
-    // Connect to db
-    Models.sequelize.authenticate().then(() => {
-
-        console.log('Connection has been established successfully.');
-
-    }).catch((err) => {
-
-        console.error('Unable to connect to the database:', err);
-
-    });
-
-    const initDb = (cb) => {
-
-        const sequelize = Models.sequelize;
-
-        // Test if we're in a sqlite memory database. we may need to run migrations.
-        if (sequelize.getDialect() === 'sqlite' &&
-      (!sequelize.options.storage || sequelize.options.storage === ':memory:')) {
-            sequelize.getMigrator({
-                Path: process.cwd() + '/database/migrations'
-            }).migrate().success(() => {
-                // The migrations have been executed!
-                cb();
-            });
-        }
-        else {
-            cb();
-        }
-    };
-
-    console.log('info', 'Database connected');
+    console.log('Info:', 'Plugins registered');
 
     server.auth.strategy('jwt', 'jwt', {
         key: Config.secretKey, // Never Share your secret key
@@ -70,14 +38,14 @@ server.register(Plugins, (err) => {
         tokenType: Config.tokenType // Allow custom token type, e.g. Authorization: <tokenType> 12345678
     });
 
-    console.log('info', 'Registered auth strategy: jwt');
+    console.log('Info:', 'Registered auth strategy: jwt');
 
     // Default authentication
     server.auth.default('jwt');
 
     server.route(Routes.api);
 
-    console.log('info', 'Routes registered');
+    console.log('Info:', 'Routes registered');
 
     // Start your server after plugin registration
     server.start((err) => {
@@ -89,11 +57,7 @@ server.register(Plugins, (err) => {
             throw err;
         }
 
-        initDb(() => {
-
-            console.log(`Server running at: ${server.select('app').info.uri}`);
-
-        });
+        console.log('Info:', `Server running at: ${server.select('app').info.uri}`);
 
     });
 
