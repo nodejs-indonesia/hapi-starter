@@ -6,6 +6,7 @@ const config = {
     development: {
         host: process.env.SERVER_HOST,
         port: process.env.SERVER_PORT,
+        labels: 'app',
         routes: {
             cors: true
         },
@@ -22,6 +23,7 @@ const config = {
     production: {
         host: process.env.SERVER_HOST,
         port: process.env.SERVER_PORT,
+        labels: 'app',
         secretKey: process.env.JWT_SECRET_KEY,
         algorithms: process.env.JWT_ALGORITHMS,
         expiresIn: process.env.JWT_EXPIRE_TIME,

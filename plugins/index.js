@@ -63,6 +63,9 @@ module.exports = [
     },
     {
         register: require('hapi-auth-jwt2')
+    },
+    {
+        register: require('./socketio')
     }
-    //require additional plugins here
+    // require additional plugins here
 ];

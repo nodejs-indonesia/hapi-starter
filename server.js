@@ -1,7 +1,7 @@
 'use strict';
 
 const Hapi      = require('hapi');
-// const Path      = require('path');
+// const Path   = require('path');
 const _         = require('lodash');
 const JwToken   = require('./plugins/jwToken'); // bring your own validation function
 const server    = new Hapi.Server(); // Create a server with a host and port
@@ -12,7 +12,8 @@ const Models    = require('./models'); // Add the Models
 
 
 // Server Config
-server.connection(_.pick(Config, ['host', 'port', 'Routes']));
+server.connection(_.pick(Config, ['host', 'port', 'routes', 'labels']));
+server.connection({ port: process.env.WEBSOCKET_PORT, labels: ['websocket'] });
 
 // Export the server to be required elsewhere.
 module.exports = server;
@@ -23,11 +24,11 @@ server.register(Plugins, (err) => {
         console.log('error', 'failed to install Plugins');
         console.log(err);
         throw err;
-    };
+    }
 
     console.log('info', 'Plugins registered');
 
-    //Connect to db
+    // Connect to db
     Models.sequelize.authenticate().then(() => {
 
         console.log('Connection has been established successfully.');
@@ -42,7 +43,7 @@ server.register(Plugins, (err) => {
 
         const sequelize = Models.sequelize;
 
-        //Test if we're in a sqlite memory database. we may need to run migrations.
+        // Test if we're in a sqlite memory database. we may need to run migrations.
         if (sequelize.getDialect() === 'sqlite' &&
       (!sequelize.options.storage || sequelize.options.storage === ':memory:')) {
             sequelize.getMigrator({
@@ -56,6 +57,7 @@ server.register(Plugins, (err) => {
             cb();
         }
     };
+
     console.log('info', 'Database connected');
 
     server.auth.strategy('jwt', 'jwt', {
@@ -89,7 +91,7 @@ server.register(Plugins, (err) => {
 
         initDb(() => {
 
-            console.log(`Server running at: ${server.info.uri}`);
+            console.log(`Server running at: ${server.select('app').info.uri}`);
 
         });
 
