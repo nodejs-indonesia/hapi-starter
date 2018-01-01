@@ -2,6 +2,8 @@
 
 const Models = require('../models');
 const Boom = require('boom');
+const EventEmitter  = require('events');
+const notifier      = new EventEmitter().setMaxListeners(0);
 
 module.exports = {
 
@@ -11,6 +13,8 @@ module.exports = {
     |--------------------------------------------------------------------------
     */
 
+    notifier,
+
     listUser: (request, reply) => {
 
         Models.User.findAndCountAll().then((user) => {
@@ -18,6 +22,8 @@ module.exports = {
             if (!user) {
                 reply(Boom.notFound('User does not exist.'));
             }
+
+            notifier.emit('ListUser', user);
 
             reply({
                 statusCode: 200,
