@@ -1,7 +1,7 @@
 'use strict';
 
-const Models = require('../models');
-const Boom = require('boom');
+const Models        = require('../models');
+const Boom          = require('boom');
 const EventEmitter  = require('events');
 const notifier      = new EventEmitter().setMaxListeners(0);
 

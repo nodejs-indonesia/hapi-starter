@@ -21,6 +21,8 @@ module.exports = [{
     }
 },
 
-{ method: 'GET', path: apiUrl + '/users', config: { auth: false }, handler: Controllers.user.listUser }
+{ method: 'POST',  path: apiUrl + '/auth/register', config: { auth: false }, handler: Controllers.auth.register },
+{ method: 'POST',  path: apiUrl + '/auth/login',    config: { auth: false }, handler: Controllers.auth.login },
+{ method: 'GET',   path: apiUrl + '/users',         config: { auth: false }, handler: Controllers.user.listUser }
 
 ];
