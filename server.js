@@ -8,8 +8,6 @@ const server    = new Hapi.Server(); // Create a server with a host and port
 const Config    = require('./config/app'); // Config app
 const Routes    = require('./routes'); // Add the route
 const Plugins   = require('./plugins'); // Load Plugins
-// const Models    = require('./models'); // Add the Models
-
 
 // Server Config
 server.connection(_.pick(Config, ['host', 'port', 'routes', 'labels']));
